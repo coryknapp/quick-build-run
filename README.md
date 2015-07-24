@@ -14,3 +14,12 @@ void some_function(){
 //qbr echo this is not because a noncomment line preceded it.
 }
 ```
+
+As a more realistic example, one of my test c++ files starts with this
+
+```c++
+//[normal header stuff]
+//[author, file description, whatever]
+//qbr clang++ -std=c++11 test.cpp -lsfml-graphics -lsfml-window -lsfml-system
+//qbr ./a.out
+```
