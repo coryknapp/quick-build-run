@@ -15,7 +15,9 @@ def launch_command( command ):
     """
     print color.OKBLUE + command + color.ENDC
     comp = sub.Popen( command.split(), stdout=sub.PIPE, stderr=sub.PIPE)
+    comp.wait()
     output, errors = comp.communicate()
+
     print output[:-1] #cut the \n at the end
 
 commands = []
